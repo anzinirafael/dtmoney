@@ -27,6 +27,6 @@ export const Content = styled.div`
         transition: filter 0.2s;
         &:hover{
             filter: brightness(0.9);
-    }
+        }
     }
 `
