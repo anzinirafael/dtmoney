@@ -10,21 +10,19 @@ export const Container = styled.tr<Props>`
     margin-bottom: 0.50rem;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
-
+    border-radius: 0.25rem;
     align-self: center;
     background: var(--shape);
     padding: 1.25rem 2rem;
     td{
         font-size: 1rem;
         font-weight: 400;
+        color: var(--text);
         &.title{
         color: var(--title);
         }
         &.price{
             ${({type}) => type === 'up' ? css`color: var(--green)` : css`color: var(--red)`};
-        }
-        &.category, &.date{
-            color: var(--text);
         }
     }
 
