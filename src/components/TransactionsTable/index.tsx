@@ -13,10 +13,10 @@ interface Props {
 export function TransactionsTable({title, price, category, date, type} : Props){
     return(
         <Container type={type}>
-            <strong className="title">{title}</strong>
-            <strong className="price">{price}</strong>
-            <strong className="category">{category}</strong>
-            <strong className="date">{date}</strong>
+            <td className="title">{title}</td>
+            <td className="price">{price}</td>
+            <td className="category">{category}</td>
+            <td className="date">{date}</td>
         </Container>
     )
 }

@@ -4,7 +4,7 @@ interface Props{
     type: 'up' | 'down';
 }
 
-export const Container = styled.section<Props>`
+export const Container = styled.tr<Props>`
     max-width: 1128px;
     margin: 0 auto;
     margin-bottom: 0.50rem;
@@ -14,7 +14,7 @@ export const Container = styled.section<Props>`
     align-self: center;
     background: var(--shape);
     padding: 1.25rem 2rem;
-    strong{
+    td{
         font-size: 1rem;
         font-weight: 400;
         &.title{

@@ -12,15 +12,15 @@ export function Dashboard(){
                 <CardsTransactions title="Total" values="R$ 16.141,00" icon="total"  type="total"/>
             </Cards>
             <HeaderTransactionsTable>
-                <h1>Título</h1>
-                <h1>Preço</h1>
-                <h1>Categoria</h1>
-                <h1>Data</h1>
+                <td>Título</td>
+                <td>Preço</td>
+                <td>Categoria</td>
+                <td>Data</td>
             </HeaderTransactionsTable>
             <TransactionsTable title="Desenvolvimento de site" price="R$ 12.000,00" category="Venda" date="13/04/2021" type="up"/>
             <TransactionsTable title="Hamburguer" price="- R$ 59,00" category="Alimentação" date="10/04/2021" type="down"/>
             <TransactionsTable title="Aluguel do apartamento" price="- R$ 1.200,00" category="Casa" date="27/03/2021" type="down"/>
             <TransactionsTable title="Computador" price="R$ 5.400,00" category="Venda" date="15/03/2021" type="up"/>
-        </Container>    
+        </Container>
     )
 }
