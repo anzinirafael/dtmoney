@@ -7,7 +7,6 @@ import close from './../../assets/close.svg';
 export function Modal() {
   return (
     <Container>
-      <button className="close"> <img src={close} alt="Icon close"/> </button>  
       <h1>Cadastrar transação</h1>
       <input type="text" placeholder="Nome" />
       <br/>
@@ -24,7 +23,7 @@ export function Modal() {
       </div>
       <input type="text" placeholder="Categoria" />
       <br />
-      <button>Cadastrar</button>
+      <button >Cadastrar</button>
     </Container>
   );
 }
