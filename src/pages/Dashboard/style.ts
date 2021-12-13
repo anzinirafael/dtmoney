@@ -15,10 +15,10 @@ export const Cards = styled.div`
 `
 
 
-export const HeaderTransactionsTable = styled.tr`
+export const HeaderTransactionsTable = styled.thead`
     max-width: 1280px;
     margin-top: 4rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     color: var(--text);

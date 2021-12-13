@@ -13,7 +13,7 @@ export const Container = styled.tr<Props>`
     border-radius: 0.25rem;
     align-self: center;
     background: var(--shape);
-    padding: 1.25rem 2rem;
+    padding: 1rem 2rem;
     td{
         font-size: 1rem;
         font-weight: 400;
@@ -25,5 +25,4 @@ export const Container = styled.tr<Props>`
             ${({type}) => type === 'up' ? css`color: var(--green)` : css`color: var(--red)`};
         }
     }
-
 `

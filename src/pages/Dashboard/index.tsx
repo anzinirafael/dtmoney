@@ -21,6 +21,7 @@ export function Dashboard(){
             <TransactionsTable title="Hamburguer" price="- R$ 59,00" category="Alimentação" date="10/04/2021" type="down"/>
             <TransactionsTable title="Aluguel do apartamento" price="- R$ 1.200,00" category="Casa" date="27/03/2021" type="down"/>
             <TransactionsTable title="Computador" price="R$ 5.400,00" category="Venda" date="15/03/2021" type="up"/>
+
         </Container>
     )
 }

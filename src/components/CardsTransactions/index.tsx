@@ -15,7 +15,7 @@ interface Props{
 }
 
 export function CardsTransactions({values, title, icon, type} : Props){  
-    function returnIcon(icon : string){
+    function returnIconCards(icon : string){
         if (icon === 'income'){
             return income
         }
@@ -30,7 +30,7 @@ export function CardsTransactions({values, title, icon, type} : Props){
         <Container type={type}>
             <header>
                 <h1>{title}</h1>
-                <img src={returnIcon(icon)} alt="Cards Transactions" />
+                <img src={returnIconCards(icon)} alt="Cards Transactions" />
             </header>
             <strong>{values}</strong>
         </Container>

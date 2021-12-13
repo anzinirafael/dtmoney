@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { api } from '../../services/api';
 import {
     Container
 } from './style';
@@ -11,6 +13,9 @@ interface Props {
 }
 
 export function TransactionsTable({title, price, category, date, type} : Props){
+    useEffect(() => {
+        api.get('/transactions').then(response => console.log(response.data))
+    }, []);
     return(
         <Container type={type}>
             <td className="title">{title}</td>

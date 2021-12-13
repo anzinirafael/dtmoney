@@ -11,7 +11,7 @@ export function Header(){
             <Content> 
                 <img src={logo}/>
                 <button>
-                        Nova Transação
+                    Nova Transação
                 </button>
             </Content>
         </Container>
