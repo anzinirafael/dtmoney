@@ -46,7 +46,7 @@ export const Container = styled.div`
             margin-right: 2%;
             border: solid 1px #d7d7d7;
             background-color: var(--background);
-            transition: filter 0.2s;
+            transition: filter 0.3s;
             img{
                 margin-right: 1.5rem;
                 font-size: 1.5rem;

@@ -36,4 +36,7 @@ export const ModalContainer = styled(ReactModal)`
     align-items: center;
     justify-content: center;
     border-radius: 0.25rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
 `
