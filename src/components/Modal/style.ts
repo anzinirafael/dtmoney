@@ -3,8 +3,19 @@ import styled from 'styled-components';
 export const Container = styled.div`
     margin: 7% 35%;
     background-color: var(--shape);
-    padding: 4rem 3rem;
+    padding: 3.5rem 3rem;
     width: 30%;
+    border-radius: 0.40rem;
+    .close{
+        border: none;
+        position: fixed;
+        margin-top: -2.7rem;
+        margin-left: 26vw;
+        transition: filter 0.2s;
+        &:hover{
+            filter: brightness(0.9);
+        }
+    }
     h1{
         font-size: 1.5rem;
         font-family: 'Poppins', 'sans-serif';
@@ -53,7 +64,7 @@ export const Container = styled.div`
             }
         }
     }
-    button{
+    .submit{
             display: flex;
             align-items: center;
             justify-content: center;

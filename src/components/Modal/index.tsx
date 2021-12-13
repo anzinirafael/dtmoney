@@ -4,9 +4,16 @@ import income from './../../assets/income.svg';
 import outcome from './../../assets/outcome.svg';
 import close from './../../assets/close.svg';
 
-export function Modal() {
+interface Props{  
+  onClick: () => void;
+}
+
+export function Modal({onClick} : Props) {
   return (
     <Container>
+      <button className="close" onClick={onClick}>
+        <img src={close} alt="" />
+      </button>
       <h1>Cadastrar transação</h1>
       <input type="text" placeholder="Nome" />
       <br/>
@@ -23,7 +30,7 @@ export function Modal() {
       </div>
       <input type="text" placeholder="Categoria" />
       <br />
-      <button >Cadastrar</button>
+      <button className="submit">Cadastrar</button>
     </Container>
   );
 }

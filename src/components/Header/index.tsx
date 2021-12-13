@@ -29,8 +29,8 @@ export function Header(){
                 </Content>
             </Container>
             <ModalContainer isOpen={openModal}>
-                <Modal />
-            </ModalContainer>
+                <Modal onClick={handleCloseModal}/>
+            </ModalContainer>z
         </>
     )
 }
