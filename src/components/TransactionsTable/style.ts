@@ -12,7 +12,7 @@ export const Container = styled.tr<Props>`
     grid-template-columns: 3fr 1fr 1fr 1fr;
     border-radius: 0.25rem;
     align-self: center;
-    background: var(--shape);
+    background: var(--background);
     padding: 1rem 2rem;
     td{
         font-size: 1rem;

@@ -11,26 +11,30 @@ interface Props{
 export function Modal({onClick} : Props) {
   return (
     <Container>
-      <button className="close" onClick={onClick}>
-        <img src={close} alt="" />
-      </button>
-      <h1>Cadastrar transação</h1>
-      <input type="text" placeholder="Nome" />
-      <br/>
-      <input type="text" placeholder="Preço" />
-      <div className="buttons">
-        <button className="income">
-          <img src={income} alt="Icon income" />
-          <p>Entrada</p>
-        </button>
-        <button className="outcome">
-          <img src={outcome} alt="Icon outcome" />
-          <p>Saída</p>
+      <div>
+        <button className="close" onClick={onClick}>
+          <img src={close} alt="" />
         </button>
       </div>
-      <input type="text" placeholder="Categoria" />
-      <br />
-      <button className="submit">Cadastrar</button>
-    </Container>
+      <section>
+        <h1>Cadastrar transação</h1>
+        <input type="text" placeholder="Nome" />
+        <br/>
+        <input type="text" placeholder="Preço" />
+        <div className="buttons">
+          <button className="income">
+            <img src={income} alt="Icon income" />
+            <p>Entrada</p>
+          </button>
+          <button className="outcome">
+            <img src={outcome} alt="Icon outcome" />
+            <p>Saída</p>
+          </button>
+        </div>
+        <input type="text" placeholder="Categoria" />
+        <br />
+        <button className="submit">Cadastrar</button>
+      </section>
+      </Container>
   );
 }
