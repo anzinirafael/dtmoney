@@ -17,7 +17,7 @@ export const Container = styled.div`
             margin-right: 0.5rem;
             transition: filter 0.2s;
             &:hover{
-                filter: brightness(0.9);
+                filter: brightness(0.8);
             }
         }
     }
@@ -54,7 +54,7 @@ export const Container = styled.div`
             margin-right: 2%;
             border: solid 1px #d7d7d7;
             background-color: var(--background);
-            transition: filter 0.3s;
+            transition: filter font-weight 0.3s;
             img{
                 margin-right: 1.5rem;
                 font-size: 1.5rem;
@@ -68,7 +68,13 @@ export const Container = styled.div`
                 margin-right: 0;
             }
             &:hover{
-                filter: brightness(0.9);
+                filter: brightness(0.8);
+                img{
+                    font-weight: 600;
+                }
+                p{
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -85,9 +91,10 @@ export const Container = styled.div`
             font-size: 1rem;
             line-height: 1.5rem;
             margin-top: 0.25rem;
-            transition: filter 0.2s;
+            transition:  0.2s;
             &:hover{
-                filter: brightness(0.9);
+                filter: brightness(0.8);
+                font-weight: 600;
             }
         }
 
