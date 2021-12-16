@@ -13,8 +13,8 @@ export const Container = styled.div`
             border: none;
             background-color: transparent;
             position: fixed;
-            margin-top: 2rem;
-            margin-right: 0.5rem;
+            margin-top: 2.5rem;
+            margin-right: 0.8rem;
             transition: filter 0.2s;
             &:hover{
                 filter: brightness(0.8);
