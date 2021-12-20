@@ -2,19 +2,23 @@ import ReactModal from 'react-modal';
 import styled from 'styled-components';
 
 export const ModalContainer = styled(ReactModal)`
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0.25rem;
-    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 `
 
-export const Container = styled.div`
-    margin: 7% 30%;
+export const Container = styled.form`
     background-color: var(--shape);
-    width: 35%;
+    width: 100%;
+    max-width: 576px;
     border-radius: 0.40rem;
     div{
         display: flex;

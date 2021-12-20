@@ -20,7 +20,7 @@ export function App() {
   }
   return (
     <>  
-      <Modal onClick={handleCloseModal} Open={openModal} RequestClose={handleCloseModal}/>
+      <Modal onClick={handleCloseModal} RequestClose={handleCloseModal} Open={openModal}/>
       <Header onClick={handleOpenModal}/>
       <Dashboard />
       <GlobalStyle />     

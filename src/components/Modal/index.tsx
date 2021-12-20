@@ -21,9 +21,9 @@ export function Modal({onClick, Open, RequestClose} : Props) {
         </div>
         <section>
           <h1>Cadastrar transação</h1>
-          <input type="text" placeholder="Nome" />
+          <input type="text" placeholder="Título" />
           <br/>
-          <input type="text" placeholder="Preço" />
+          <input type="number" placeholder="Valor" />
           <div className="buttons">
             <button className="income">
               <img src={income} alt="Icon income" />
@@ -36,9 +36,9 @@ export function Modal({onClick, Open, RequestClose} : Props) {
           </div>
           <input type="text" placeholder="Categoria" />
           <br />
-          <button className="submit">Cadastrar</button>
+          <button className="submit" type="submit">Cadastrar</button>
         </section>
-        </Container>
+        </Container>  
       </ModalContainer>
   );
 }
