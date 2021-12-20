@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ReactModal from 'react-modal';
 export const Container = styled.div`
     background-color: var(--blue);
     padding-top: 2rem;
@@ -31,12 +30,4 @@ export const Content = styled.header`
         }
     }
 `
-export const ModalContainer = styled(ReactModal)`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.25rem;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-`
+

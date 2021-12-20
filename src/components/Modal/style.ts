@@ -1,9 +1,20 @@
+import ReactModal from 'react-modal';
 import styled from 'styled-components';
 
+export const ModalContainer = styled(ReactModal)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+`
+
 export const Container = styled.div`
-    margin: 7% 35%;
+    margin: 7% 30%;
     background-color: var(--shape);
-    width: 30%;
+    width: 35%;
     border-radius: 0.40rem;
     div{
         display: flex;
@@ -33,12 +44,12 @@ export const Container = styled.div`
     input{
         width: 100%;
         padding: 1.25rem 1.50rem;
-        border-radius: 0.25rem;
         margin-bottom: 1rem;
         background-color: var(--background);
         font-size: 16px;
         line-height: 1.5rem;
         border: solid 1px #d7d7d7;
+        border-radius: 0.30rem;
     }
     .buttons{
         display: flex;
@@ -49,12 +60,14 @@ export const Container = styled.div`
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            border-radius: 0.30rem;
             padding: 1.5rem 0;
             width: 49%;
             margin-right: 2%;
-            border: solid 1px #d7d7d7;
+            border: solid 0.1px rgba(0,0,0, 0.3);
             background-color: var(--background);
             transition: filter font-weight 0.3s;
+            
             img{
                 margin-right: 1.5rem;
                 font-size: 1.5rem;
@@ -69,6 +82,7 @@ export const Container = styled.div`
             }
             &:hover{
                 filter: brightness(0.8);
+                border: none;
                 img{
                     font-weight: 600;
                 }
@@ -85,7 +99,7 @@ export const Container = styled.div`
             padding: 1.25rem 0;
             width: 100%;
             background-color: var(--green);
-            border-radius: 0.25rem;
+            border-radius: 0.30rem;
             border: none;
             color: var(--shape);
             font-size: 1rem;
@@ -93,8 +107,9 @@ export const Container = styled.div`
             margin-top: 0.25rem;
             transition:  0.2s;
             &:hover{
-                filter: brightness(0.8);
+                filter: brightness(0.75);
                 font-weight: 600;
+                border: solid 0.1px #d7d7d7;
             }
         }
 

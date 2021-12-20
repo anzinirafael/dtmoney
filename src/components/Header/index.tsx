@@ -3,34 +3,24 @@ import logo from "./../../assets/logo.svg";
 import {
     Container,
     Content,
-    ModalContainer
 } from './style';
-import { Modal } from './../Modal';
 
-export function Header(){   
-    const [openModal, setOpenModal] = useState(false);
+interface  Props{
+    onClick: () => void;
+}
 
-    function handleOpenModal(){
-        setOpenModal(true);
-    }
-
-    function handleCloseModal(){
-        setOpenModal(false);
-    }
-
+export function Header({onClick} : Props){   
     return(
         <>
             <Container>
                 <Content> 
                     <img src={logo}/>
-                    <button onClick={handleOpenModal}>
+                    <button onClick={onClick}>
                         Nova Transação
                     </button>
                 </Content>
             </Container>
-            <ModalContainer isOpen={openModal}>
-                <Modal onClick={handleCloseModal}/>
-            </ModalContainer>z
+
         </>
     )
 }
