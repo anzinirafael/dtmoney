@@ -47,13 +47,16 @@ export const Container = styled.form`
     }
     input{
         width: 100%;
-        padding: 1.25rem 1.50rem;
+        padding: 1rem 1.50rem;
         margin-bottom: 1rem;
-        background-color: var(--background);
+        background-color: #e7e9ee;
         font-size: 16px;
         line-height: 1.5rem;
         border: solid 1px #d7d7d7;
         border-radius: 0.30rem;
+        &::placeholder{
+            color: var(--text);
+        }
     }
     .buttons{
         display: flex;
@@ -71,7 +74,6 @@ export const Container = styled.form`
             border: solid 0.1px rgba(0,0,0, 0.3);
             background-color: var(--background);
             transition: filter font-weight 0.3s;
-            
             img{
                 margin-right: 1.5rem;
                 font-size: 1.5rem;
