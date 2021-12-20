@@ -59,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: var(--shape);
         width: 100%;
         max-width: 576px;
-        border-radius: 0.4rem;
+        border-radius: 0.25rem;
         padding: 3rem;
         position: relative;
     }

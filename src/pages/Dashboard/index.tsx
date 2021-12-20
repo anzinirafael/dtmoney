@@ -1,4 +1,3 @@
-import React from "react";
 import { CardsTransactions } from "../../components/CardsTransactions";
 import { TransactionsTable } from "../../components/TransactionsTable";
 import { Container, Cards, HeaderTransactionsTable } from "./style";

@@ -18,7 +18,8 @@ export function TransactionsTable({
   type,
 }: Props) {
   useEffect(() => {
-    api.get("/transactions").then((response) => console.log(response.data));
+    api.get("/transactions")
+    .then((response) => console.log(response.data));
   }, []);
   return (
     <Container type={type}>

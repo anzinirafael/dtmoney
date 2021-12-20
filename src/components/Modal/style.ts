@@ -22,34 +22,35 @@ export const Container = styled.form`
     width: 100%;
     padding: 0 1.5rem;
     height: 4rem;
-    margin-bottom: 1rem;
     background-color: var(--background-input);
     border: solid 1px var(--color-border);
     font-size: 16px;
     line-height: 1.5rem;
-    border-radius: 0.3rem;
+    border-radius: 0.25rem;
     &::placeholder {
       color: var(--text);
+    }
+    & + input{
+      margin-top: 1rem;
     }
   }
   button.submit {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.25rem 0;
+    height: 4rem;
     width: 100%;
     background-color: var(--green);
-    border-radius: 0.3rem;
-    border: none;
     color: var(--shape);
+    border-radius: 0.25rem;
+    border: none;
     font-size: 1rem;
     line-height: 1.5rem;
-    margin-top: 0.25rem;
+    margin-top: 1.5rem;
     transition: 0.2s;
     font-weight: 600;
     &:hover {
       filter: brightness(0.9);
-      font-weight: 600;
       border: solid 0.1px var(--color-border);
     }
   }

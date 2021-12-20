@@ -21,7 +21,7 @@ export function Modal({ Open, RequestClose }: Props) {
         className="close"
         onClick={RequestClose}
         type="button">
-          <img src={ImgClose} alt="Fechar Modal" />
+          <img src={ImgClose} alt="Fechar Modal"/>
         </button>
         <h2>Cadastrar transação</h2>
         <input type="text" placeholder="Título" />
