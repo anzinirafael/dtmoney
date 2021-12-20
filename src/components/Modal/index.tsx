@@ -1,28 +1,28 @@
 import React from "react";
 import { Container, ModalContainer } from "./style";
-import income from './../../assets/income.svg';
-import outcome from './../../assets/outcome.svg';
-import close from './../../assets/close.svg';
+import income from "./../../assets/income.svg";
+import outcome from "./../../assets/outcome.svg";
+import close from "./../../assets/close.svg";
 
-interface Props{  
+interface Props {
   onClick: () => void;
   Open: boolean;
   RequestClose: () => void;
 }
 
-export function Modal({onClick, Open, RequestClose} : Props) {
+export function Modal({ onClick, Open, RequestClose }: Props) {
   return (
     <ModalContainer isOpen={Open} onRequestClose={RequestClose}>
       <Container>
         <div>
-          <button className="close" onClick={onClick}>
-            <img src={close} alt="" />
+          <button className="close" onClick={onClick} type="button">
+            <img src={close} alt="Fechar Modal" />
           </button>
         </div>
         <section>
           <h1>Cadastrar transação</h1>
           <input type="text" placeholder="Título" />
-          <br/>
+          <br />
           <input type="number" placeholder="Valor" />
           <div className="buttons">
             <button className="income">
@@ -36,9 +36,11 @@ export function Modal({onClick, Open, RequestClose} : Props) {
           </div>
           <input type="text" placeholder="Categoria" />
           <br />
-          <button className="submit" type="submit">Cadastrar</button>
+          <button className="submit" type="submit">
+            Cadastrar
+          </button>
         </section>
-        </Container>  
-      </ModalContainer>
+      </Container>
+    </ModalContainer>
   );
 }

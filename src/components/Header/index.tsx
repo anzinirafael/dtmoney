@@ -1,26 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import logo from "./../../assets/logo.svg";
-import {
-    Container,
-    Content,
-} from './style';
+import { Container, Content } from "./style";
 
-interface  Props{
-    onClick: () => void;
+interface Props {
+  onClick: () => void;
 }
 
-export function Header({onClick} : Props){   
-    return(
-        <>
-            <Container>
-                <Content> 
-                    <img src={logo}/>
-                    <button onClick={onClick}>
-                        Nova Transação
-                    </button>
-                </Content>
-            </Container>
-
-        </>
-    )
+export function Header({ onClick }: Props) {
+  return (
+    <>
+      <Container>
+        <Content>
+          <img src={logo} />
+          <button onClick={onClick}>Nova Transação</button>
+        </Content>
+      </Container>
+    </>
+  );
 }
