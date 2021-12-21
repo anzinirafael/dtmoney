@@ -31,7 +31,7 @@ export const Container = styled.form`
       color: var(--text);
     }
     & + input{
-      margin-top: 1rem;
+      
     }
   }
   button.submit {
