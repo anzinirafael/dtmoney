@@ -62,22 +62,29 @@ export const CheckBoxButtons = styled.div`
   justify-content: center;
   margin: 1rem 0;
   button{
-    padding: 1.5rem 0;
+    height: 4rem;
     width: 49%;
     border-radius: 0.25rem;
     border: solid 1px var(--color-border);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+    transition: border-color 0.2s;
     & + button{
       margin-left: 2%;
     }
     img{
       margin-right: 1rem;
+      width: 1.75rem;
+      height: 1.75rem;
     }
     span{
       font-size: 1rem;
-      color: var(--title);
+      color: var(--title);  
+    }
+    &:hover{
+      border-color: var(--border-hover);
     }
   }
 `
