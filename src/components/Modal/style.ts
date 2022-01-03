@@ -61,7 +61,14 @@ export const CheckBoxButtons = styled.div`
   align-items: center;
   justify-content: center;
   margin: 1rem 0;
-  button{
+ 
+`
+
+interface PropsRadioBox{
+  isActive: boolean;
+}
+
+export const RadioBox = styled.button<PropsRadioBox>`
     height: 4rem;
     width: 49%;
     border-radius: 0.25rem;
@@ -71,6 +78,7 @@ export const CheckBoxButtons = styled.div`
     justify-content: center;
     background: transparent;
     transition: border-color 0.2s;
+    background: ${({isActive}) => isActive ? '#aaa' : 'transparent'};
     & + button{
       margin-left: 2%;
     }
@@ -86,5 +94,4 @@ export const CheckBoxButtons = styled.div`
     &:hover{
       border-color: var(--border-hover);
     }
-  }
 `

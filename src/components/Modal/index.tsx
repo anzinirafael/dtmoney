@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, CheckBoxButtons } from "./style";
+import React, { useState } from "react";
+import { Container, CheckBoxButtons, RadioBox } from "./style";
 import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";
 import ImgClose from "./../../assets/close.svg";
@@ -11,6 +11,8 @@ interface Props {
 }
 
 export function Modal({ Open, RequestClose }: Props) {
+  const [selectTypeButtonDeposit, setSelectTypeButtonDeposit] = useState('deposit');
+
   return (
     <ReactModal
       isOpen={Open}
@@ -29,14 +31,20 @@ export function Modal({ Open, RequestClose }: Props) {
         <input type="text" placeholder="Título" />
         <input type="number" placeholder="Valor" />
         <CheckBoxButtons>
-          <button type="button">
+          <RadioBox type="button" 
+          onClick={() => { setSelectTypeButtonDeposit('deposit') }}
+          isActive={selectTypeButtonDeposit === 'deposit'}
+          >
             <img src={income} alt="Entrada" /> 
             <span>Entrada</span>           
-          </button>
-          <button type="button">
+          </RadioBox>
+          <RadioBox type="button" 
+          onClick={() => { setSelectTypeButtonDeposit('withdraw') }}
+          isActive={selectTypeButtonDeposit === 'withdraw'}
+          >
             <img src={outcome} alt="Saída" /> 
             <span>Saída</span>           
-          </button>
+          </RadioBox>
         </CheckBoxButtons>
         <input type="text" placeholder="Categoria" />
         <button className="submit" type="submit">
