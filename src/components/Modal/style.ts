@@ -55,3 +55,29 @@ export const Container = styled.form`
     }
   }
 `;
+
+export const CheckBoxButtons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  button{
+    padding: 1.5rem 0;
+    width: 49%;
+    border-radius: 0.25rem;
+    border: solid 1px var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & + button{
+      margin-left: 2%;
+    }
+    img{
+      margin-right: 1rem;
+    }
+    span{
+      font-size: 1rem;
+      color: var(--title);
+    }
+  }
+`

@@ -1,5 +1,7 @@
 import React from "react";
-import { Container } from "./style";
+import { Container, CheckBoxButtons } from "./style";
+import income from "./../../assets/income.svg";
+import outcome from "./../../assets/outcome.svg";
 import ImgClose from "./../../assets/close.svg";
 import ReactModal from "react-modal";
 
@@ -26,6 +28,16 @@ export function Modal({ Open, RequestClose }: Props) {
         <h2>Cadastrar transação</h2>
         <input type="text" placeholder="Título" />
         <input type="number" placeholder="Valor" />
+        <CheckBoxButtons>
+          <button type="button">
+            <img src={income} alt="Entrada" /> 
+            <span>Entrada</span>           
+          </button>
+          <button type="button">
+            <img src={outcome} alt="Saída" /> 
+            <span>Saída</span>           
+          </button>
+        </CheckBoxButtons>
         <input type="text" placeholder="Categoria" />
         <button className="submit" type="submit">
           Cadastrar
