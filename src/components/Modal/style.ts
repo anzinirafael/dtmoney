@@ -1,4 +1,6 @@
+import { prependOnceListener } from "process";
 import styled from "styled-components";
+import { transparentize } from "polished";
 
 export const Container = styled.form`
   button.close {
@@ -56,6 +58,10 @@ export const Container = styled.form`
   }
 `;
 
+export const ContainerForms = styled.div`
+  
+`
+
 export const CheckBoxButtons = styled.div`
   display: flex;
   align-items: center;
@@ -66,6 +72,12 @@ export const CheckBoxButtons = styled.div`
 
 interface PropsRadioBox{
   isActive: boolean;
+  activeColor: 'green' | 'red';
+}
+
+const colors = {
+  green: "#12A454",
+  red: "#E52E4D"
 }
 
 export const RadioBox = styled.button<PropsRadioBox>`
@@ -78,7 +90,7 @@ export const RadioBox = styled.button<PropsRadioBox>`
     justify-content: center;
     background: transparent;
     transition: border-color 0.2s;
-    background: ${({isActive}) => isActive ? '#aaa' : 'transparent'};
+    background: ${({isActive, activeColor}) => isActive ? transparentize(0.7, colors[activeColor]) : 'transparent'};
     & + button{
       margin-left: 2%;
     }
