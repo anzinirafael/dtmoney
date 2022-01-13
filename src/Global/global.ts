@@ -64,4 +64,15 @@ export const GlobalStyle = createGlobalStyle`
         padding: 3rem;
         position: relative;
     }
+    button.close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
 `;

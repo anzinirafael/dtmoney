@@ -3,17 +3,7 @@ import styled from "styled-components";
 import { transparentize } from "polished";
 
 export const Container = styled.form`
-  button.close {
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    transition: filter 0.2s;
-    &:hover {
-      filter: brightness(0.8);
-    }
-  }
+
   h2 {
     font-size: 1.5rem;
     font-family: "Poppins", "sans-serif";
@@ -36,7 +26,7 @@ export const Container = styled.form`
       margin-top: 1rem;
     }
   }
-  button.submit {
+  button[type="submit"] {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +39,7 @@ export const Container = styled.form`
     font-size: 1rem;
     line-height: 1.5rem;
     margin-top: 1.5rem;
-    transition: 0.2s;
+    transition: filter 0.2s;
     font-weight: 600;
     &:hover {
       filter: brightness(0.9);
@@ -58,7 +48,7 @@ export const Container = styled.form`
   }
 `;
 
-export const ContainerForms = styled.div`
+export const ContainerForms = styled.form`
   
 `
 
