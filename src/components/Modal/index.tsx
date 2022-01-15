@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React,{ FormEvent, useState } from "react";
 import { Container, CheckBoxButtons, RadioBox, ContainerForms } from "./style";
 import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";

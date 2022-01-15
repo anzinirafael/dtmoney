@@ -2,7 +2,7 @@ import { prependOnceListener } from "process";
 import styled from "styled-components";
 import { transparentize } from "polished";
 
-export const Container = styled.form`
+export const Container = styled.div`
 
   h2 {
     font-size: 1.5rem;
