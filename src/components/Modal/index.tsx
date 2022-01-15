@@ -4,6 +4,7 @@ import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";
 import ImgClose from "./../../assets/close.svg";
 import ReactModal from "react-modal";
+import { api } from "../../services/api";
 
 interface Props {
   Open: boolean;
@@ -26,6 +27,7 @@ export function Modal({ Open, RequestClose }: Props) {
       selectTypeButtonDeposit,
     };
     console.log(data);
+    api.post('/transactions', data)
   }
 
   return (
