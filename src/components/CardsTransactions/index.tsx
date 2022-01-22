@@ -2,6 +2,8 @@ import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";
 import total from "./../../assets/total.svg";
 import { Container } from "./style";
+import {useContext} from 'react';
+import { TransactionsContext } from "../TransactionsContext/TransactionsProvider";
 
 interface Props {
   title: string;
@@ -11,6 +13,8 @@ interface Props {
 }
 
 export function CardsTransactions({ values, title, icon, type }: Props) {
+  const transactions = useContext(TransactionsContext);
+  console.log(transactions)
   function returnIconCards(icon: string) {
     if (icon === "income") {
       return income;

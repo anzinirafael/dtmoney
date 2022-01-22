@@ -1,24 +1,10 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
+import { useContext} from "react";
+import { TransactionsContext } from "../TransactionsContext/TransactionsProvider";
 import { Container } from "./style";
 
-
-interface Props {
-  id: number;
-  title: string;
-  selectTypeButtonDeposit: "deposit" | "withdraw";
-  value: number;
-  category: string;
-  date: number;
-} 
-
 export function TransactionsTable() {
-  const [transactions, setTransactions] = useState<Props[]>([]);
+  const transactions = useContext(TransactionsContext);
 
-  useEffect(() => {
-    api.get("/transactions")
-    .then((response) => setTransactions(response.data.transactions));
-  }, []);
   return (
     <>
       {transactions.map(transaction => (
