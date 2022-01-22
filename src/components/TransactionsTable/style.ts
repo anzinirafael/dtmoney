@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface Props {
-  selectTypeButtonDeposit?: "deposit" | "withdraw";
+  selectTypeButtonDeposit: "deposit" | "withdraw";
 }
 
 export const Container = styled.tr<Props>`
@@ -21,7 +21,7 @@ export const Container = styled.tr<Props>`
     &.title {
       color: var(--title);
     }
-    &.type {
+    &.price {
       ${({ selectTypeButtonDeposit }) =>
         selectTypeButtonDeposit === "deposit"
           ? css`

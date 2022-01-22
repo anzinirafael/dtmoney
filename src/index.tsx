@@ -31,7 +31,7 @@ createServer({
           id: 3,
           title: "Aluguel do apartamento",
           selectTypeButtonDeposit: "withdrawn",
-          value: "- R$ 1200,00",
+          value: "R$ 1200,00",
           category: "Casa",
           date: new Date()
         },

@@ -8,37 +8,26 @@ interface Props {
   selectTypeButtonDeposit: "deposit" | "withdraw";
   value: string;
   category: string;
-  date: Date;
+  date: string;
 }
 
-export function TransactionsTable({
-  id,
-  title,
-  selectTypeButtonDeposit,
-  value,
-  category,
-  date,
-}: Props) {
-  const [addTransactions, setAddTransactions] = useState<Props[]>([]);
+export function TransactionsTable() {
+  const [transactions, setTransactions] = useState<Props[]>([]);
 
   useEffect(() => {
     api.get("/transactions")
-    .then((response) => setAddTransactions(response.data.addTransactions));
+    .then((response) => setTransactions(response.data.transactions));
   }, []);
   return (
     <>
-      {addTransactions.map(transaction => {
-        return(
-          <Container selectTypeButtonDeposit={transaction.selectTypeButtonDeposit} key={transaction.id}>
-            <tr>
-              <td className="title">{transaction.title}</td>
-              <td className="price">{transaction.value}</td>  
-              <td className="category">{transaction.category}</td>
-              <td className="date">{transaction.date}</td> 
-            </tr>
+      {transactions.map(transaction => (
+          <Container selectTypeButtonDeposit={transaction.selectTypeButtonDeposit} key={transaction.id}>  
+            <td className="title">{transaction.title}</td>
+            <td className="price">{transaction.value}</td>  
+            <td className="category">{transaction.category}</td>
+            <td className="date">{transaction.date}</td> 
           </Container>
-        );
-      })}
+      ))}
     </>
   );
 }

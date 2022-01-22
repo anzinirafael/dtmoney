@@ -31,6 +31,7 @@ export function Dashboard() {
         <td>Categoria</td>
         <td>Data</td>
       </HeaderTransactionsTable>
+      <TransactionsTable />
     </Container>
   );
 }
