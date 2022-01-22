@@ -2,12 +2,51 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
 import { createServer, Model } from "miragejs";
+import Db from "miragejs/db";
 
 createServer({
   models: {
     transaction: Model
   },
-
+  seeds(server){
+    server.db.loadData({
+      transactions: [
+        {
+          id: 1,
+          title: "Desenvolvimento de sites",
+          selectTypeButtonDeposit: "deposit",
+          value: "R$ 12000,00",
+          category: "Trabalho",
+          date: new Date()
+        },
+        {
+          id: 2,
+          title: "Hamburguer",
+          selectTypeButtonDeposit: "withdrawn",
+          value: "R$ 36,00",
+          category: "Alimentação",
+          date: new Date()
+        },
+        {
+          id: 3,
+          title: "Aluguel do apartamento",
+          selectTypeButtonDeposit: "withdrawn",
+          value: "- R$ 1200,00",
+          category: "Casa",
+          date: new Date()
+        },
+        {
+          id: 4,
+          title: "Computador",
+          selectTypeButtonDeposit: "withdrawn",
+          value: "R$ 5400,00",
+          category: "Venda",
+          date: new Date()
+        }
+      ] 
+    })
+  }
+  ,
   routes() {
     this.namespace = "api";
     this.get("/transactions", () => {
