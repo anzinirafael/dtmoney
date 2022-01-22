@@ -5,13 +5,14 @@ import outcome from "./../../assets/outcome.svg";
 import ImgClose from "./../../assets/close.svg";
 import ReactModal from "react-modal";
 import { api } from "../../services/api";
+import { randomInt } from "crypto";
 
 interface Props {
   Open: boolean;
   RequestClose: () => void;
 }
 
-export function Modal({ Open, RequestClose }: Props) {
+export function Modal({ Open, RequestClose}: Props) {
   const [title, setTitle] = useState("");
   const [value, setValue] = useState(0);
   const [category, setCategory] = useState("");
@@ -20,7 +21,9 @@ export function Modal({ Open, RequestClose }: Props) {
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
+    const id = parseInt("10000000000000000", Math.random() * 10);
     const data = {
+      id,
       title,
       value,
       category,
