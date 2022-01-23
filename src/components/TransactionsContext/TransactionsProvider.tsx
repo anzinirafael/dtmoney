@@ -30,5 +30,4 @@ export function TrasactionsProvider({ children } : ProviderProps) {
       {children}
     </TransactionsContext.Provider>
   );
-
 }

@@ -1,6 +1,6 @@
 import { CardsTransactions } from "../../components/CardsTransactions";
 import { TransactionsTable } from "../../components/TransactionsTable";
-import { Container, Cards, HeaderTransactionsTable } from "./style";
+import { Container, Cards} from "./style";
 
 export function Dashboard() {
   return (
@@ -25,12 +25,6 @@ export function Dashboard() {
           type="total"
         />
       </Cards>
-      <HeaderTransactionsTable>
-        <td>Título</td>
-        <td>Preço</td>
-        <td>Categoria</td>
-        <td>Data</td>
-      </HeaderTransactionsTable>
       <TransactionsTable />
     </Container>
   );

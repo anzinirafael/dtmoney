@@ -14,7 +14,6 @@ interface Props {
 
 export function CardsTransactions({ values, title, icon, type }: Props) {
   const transactions = useContext(TransactionsContext);
-  console.log(transactions)
   function returnIconCards(icon: string) {
     if (icon === "income") {
       return income;

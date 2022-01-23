@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Modal } from "./components/Modal";
-import { TransactionsContext, TrasactionsProvider} from "./components/TransactionsContext/TransactionsProvider";
+import { TrasactionsProvider } from "./components/TransactionsContext/TransactionsProvider";
 import { GlobalStyle } from "./Global/global";
 import { Dashboard } from "./pages/Dashboard";
 
@@ -18,11 +18,11 @@ export function App() {
   }
   return (
     <TrasactionsProvider>
-      <Modal
-        RequestClose={handleCloseModal}
-        Open={openModal}
-      />
       <Header onClick={handleOpenModal} />
+      <Modal
+        isOpen={!!openModal}
+        RequestClose={handleCloseModal}
+      />
       <Dashboard />
       <GlobalStyle />
     </TrasactionsProvider>

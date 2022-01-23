@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^2.8.8",
     "@types/react-modal": "^3.13.1",
     "@types/styled-components": "^5.1.17",
     "axios": "^0.24.0",
