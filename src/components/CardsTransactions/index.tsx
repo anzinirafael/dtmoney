@@ -2,15 +2,15 @@ import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";
 import total from "./../../assets/total.svg";
 import { Container, Content } from "./style";
-import {useContext, useState} from 'react';
-import { TransactionsContext } from "../TransactionsContext/TransactionsProvider";
+import { useState} from 'react';
+import { useTransactions } from "../useTransactions/useTransactions";
 
 interface Props {
   type: "total" | "others";
 }
 
 export function CardsTransactions() {
-  const {transactions} = useContext(TransactionsContext);
+  const {transactions} = useTransactions();
   const totalDeposit = transactions.reduce((acc, transaction) => {
     if (transaction.selectTypeButtonDeposit === 'deposit'){
       return acc + transaction.value; 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Modal } from "./components/Modal";
-import { TrasactionsProvider } from "./components/TransactionsContext/TransactionsProvider";
+import { TrasactionsProvider } from "./components/useTransactions/useTransactions";
 import { GlobalStyle } from "./Global/global";
 import { Dashboard } from "./pages/Dashboard";
 

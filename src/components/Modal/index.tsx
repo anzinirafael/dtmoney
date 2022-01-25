@@ -1,8 +1,8 @@
 import { api } from "../../services/api";
-import React,{ FormEvent, useState, useContext, useEffect } from "react";
+import React,{ FormEvent, useState, useEffect } from "react";
 import ReactModal from "react-modal";
 import { Container, CheckBoxButtons, RadioBox, ContainerForms } from "./style";
-import { TransactionsContext } from "../TransactionsContext/TransactionsProvider";
+import { useTransactions } from "../useTransactions/useTransactions";
 import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";
 import ImgClose from "./../../assets/close.svg";
@@ -13,7 +13,7 @@ interface Props {
 }
 
 export function Modal({ isOpen, RequestClose}: Props) {
-  const {createTransactions}  =  useContext(TransactionsContext);
+  const {createTransactions}  =  useTransactions();
   const [title, setTitle] = useState("");
   const [value, setValue] = useState(0);
   const [category, setCategory] = useState("");
