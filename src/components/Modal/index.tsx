@@ -1,11 +1,11 @@
-import React,{ FormEvent, useState } from "react";
+import { api } from "../../services/api";
+import React,{ FormEvent, useState, useContext, useEffect } from "react";
+import ReactModal from "react-modal";
 import { Container, CheckBoxButtons, RadioBox, ContainerForms } from "./style";
+import { TransactionsContext } from "../TransactionsContext/TransactionsProvider";
 import income from "./../../assets/income.svg";
 import outcome from "./../../assets/outcome.svg";
 import ImgClose from "./../../assets/close.svg";
-import ReactModal from "react-modal";
-import { api } from "../../services/api";
-
 
 interface Props {
   isOpen: boolean;
@@ -13,24 +13,20 @@ interface Props {
 }
 
 export function Modal({ isOpen, RequestClose}: Props) {
+  const {createTransactions}  =  useContext(TransactionsContext);
   const [title, setTitle] = useState("");
   const [value, setValue] = useState(0);
   const [category, setCategory] = useState("");
   const [selectTypeButtonDeposit, setSelectTypeButtonDeposit] =
     useState("deposit");
-
   function handleCreateNewTransaction(event: FormEvent) {
-    event.preventDefault();
-    const id = parseInt("10000000000000000", Math.random() * 10);
-    const data = {
-      id,
+    event.preventDefault();    
+    createTransactions({
       title,
-      value,
-      category,
       selectTypeButtonDeposit,
-    };
-    console.log(data);
-    api.post('/transactions', data)
+      value,
+      category
+    })
   }
 
   return (
