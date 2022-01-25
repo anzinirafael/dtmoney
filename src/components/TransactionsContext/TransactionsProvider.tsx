@@ -20,7 +20,7 @@ interface TransactionsInputs{
 
 interface TrasactionsContextData{
   transactions: Transactions[];
-  createTransactions: (transactions: TransactionsInputs) => void; 
+  createTransactions: (transactions: TransactionsInputs) => Promise<void>; 
 }
 
 interface ProviderProps {
@@ -32,26 +32,20 @@ export const TransactionsContext = createContext<TrasactionsContextData>({} as T
 export function TrasactionsProvider({ children } : ProviderProps) {
   const [transactions, setTransactions] = useState<Transactions[]>([]);
 
-  // function submitModalTransactionsAtualized(){
-  //   const id = parseInt("10000000000000000", Math.random() * 10);
-  //   const data = {
-  //     id,
-  //     title,
-  //     value,
-  //     category,
-  //     selectTypeButtonDeposit,
-  //   };
-  //   console.log(data);
-  // }
-
   useEffect(() => {
     api
       .get("/transactions")
       .then((response) => setTransactions(response.data.transactions));
   }, []);
 
-  function createTransactions(transactions: TransactionsInputs){
-    api.post('/transactions', transactions);
+  async function createTransactions(transactionsInputs: TransactionsInputs){
+    const response = await api.post('/transactions', { ...transactionsInputs, date: new Date()});
+    const {transaction}  = response.data;
+    setTransactions([
+      ...transactions,
+      transaction,
+    ]);
+
   }
 
   return(

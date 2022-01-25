@@ -19,14 +19,20 @@ export function Modal({ isOpen, RequestClose}: Props) {
   const [category, setCategory] = useState("");
   const [selectTypeButtonDeposit, setSelectTypeButtonDeposit] =
     useState("deposit");
-  function handleCreateNewTransaction(event: FormEvent) {
+  async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();    
-    createTransactions({
+    await createTransactions({
       title,
       selectTypeButtonDeposit,
       value,
       category
     })
+    setTitle('');
+    setSelectTypeButtonDeposit('deposit');
+    setValue(0);
+    setCategory('');
+
+    RequestClose();
   }
 
   return (
