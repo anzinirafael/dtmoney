@@ -22,7 +22,7 @@ createServer({
         {
           id: 2,
           title: "Hamburguer",
-          selectTypeButtonDeposit: "withdrawn",
+          selectTypeButtonDeposit: "withdraw",
           value: 36,
           category: "Alimentação",
           date: new Date()
@@ -30,7 +30,7 @@ createServer({
         {
           id: 3,
           title: "Aluguel do apartamento",
-          selectTypeButtonDeposit: "withdrawn",
+          selectTypeButtonDeposit: "withdraw",
           value: 1200,
           category: "Casa",
           date: new Date()
@@ -38,7 +38,7 @@ createServer({
         {
           id: 4,
           title: "Computador",
-          selectTypeButtonDeposit: "withdrawn",
+          selectTypeButtonDeposit: "withdraw",
           value: 5400,
           category: "Venda",
           date: new Date()

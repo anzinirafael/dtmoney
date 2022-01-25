@@ -4,7 +4,16 @@ interface Props {
   type: "total" | "others";
 }
 
-export const Container = styled.div<Props>`
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-self: center;
+  padding: 0 1rem;
+  margin-top: -5rem;
+`
+
+export const Content = styled.div<Props>`
   padding: 1.5rem 2rem;
   ${({ type }) =>
     type === "total"
